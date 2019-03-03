@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="./lib/flexible/flexible.js"></script>
+    <link rel="stylesheet" href="./lib/bootstrap/css/bootstrap.css">
+    <link rel="stylesheet" href="./css/gsproduct.css">
+    <title>凑表单</title>
+</head>
+
+<body>
+    <div class="container">
+        <!-- 头部 -->
+        <div class="header">
+                凑表单
+            <img class="r_img" src="./images/header_app.png" alt="">
+
+        </div>
+        <!-- 导航栏 -->
+        <ul class="nav nav-tabs">
+        
+                <li class="dropdown">
+                  <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                    京东 <span class="caret"></span>
+                  </a>
+                  <ul class="jd dropdown-menu">
+                      <!-- <li><a href="#">京东</a></li>
+                      <li><a href="#">一号店</a></li>
+                      <li><a href="#">天猫</a></li> -->
+                  </ul>
+                </li>
+                <li class="dropdown">
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                          华北 <span class="caret"></span>
+                        </a>
+                        <ul class="hb dropdown-menu">
+                            <li><a href="#">是的</a></li>
+                            <li><a href="#">撒旦</a></li>
+                            <li><a href="#">萨达</a></li>
+                        </ul>
+                      </li>
+                      <li class="dropdown">
+                            <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                             全部价格 <span class="caret"></span>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a href="#">暂无</a></li>
+                               
+                            </ul>
+                          </li>    
+               
+              </ul>
+
+      
+        <!-- 具体情况 产品 -->
+        <div class="product">
+            <!-- 左边 -->
+            <div class="row">
+                <!-- <div class="left col-xs-6">
+                    <img src="./images/ic_cu.png" alt="">
+                    <p >新技术能够时代峻峰发送的</p>
+                    <span class="price">价格&yen; 1236</span>
+                    <p class="p3">京东商城 2101-12-10</p>
+                </div>
+                <div class="left col-xs-6">
+                 <img src="./images/ic_cu.png" alt="">
+                 <p >新技术能够时代峻峰发送的</p>
+                 <span class="price">价格&yen; 1236</span>
+                 <p class="p3">京东商城 2101-12-10</p>
+             </div> -->
+            </div>
+        </div>
+        <!-- 底部 -->
+        <div class="mmm_footer">
+            <ul class="clearfix">
+                <li>登陆</li>
+                <li>注册</li>
+                <li>
+                    <img src="./images/top.jpg" alt="">
+                    <p>返回顶部</p>
+                </li>
+            </ul>
+            <div class="word">
+                <span class="sp1">手机APP下载</span>
+                <span>慢慢买手机版</span>
+                <span class="sp2">掌上比价平台</span>
+                <p>m.manmanbuy.com</p>
+            </div>
+        </div>
+    </div>
+  <!-- 京东  -->
+    <script type='text/html' id='gsTpl'>
+      {{ each result v i}}
+      <li data-id='{{ v.shopId}}'><a href="#">{{v.shopName}}</a></li>
+      {{ /each}}
+    </script>
+    <!-- 华北 -->
+    <script type="text/html" id="hbTpl">
+       {{ each result v i}}
+       <li data-id='{{ v.areaId}}'><a href="#">{{v.areaName}}</a></li>
+       {{ /each}}
+    </script>
+
+    <!-- 产品渲染 -->
+    <script type="text/html" id="productTpl">
+     {{ each result v i}}
+     <div class="left col-xs-6">
+            <img src="{{ v.productImg}}" alt="">
+            <p >{{v.productName}}</p>
+            <span class="price">价格{{ v.productPrice}}</span>
+            <a class='pull-right' href="#">去凑单</a>
+        </div>
+     {{ /each}}
+    </script>
+
+
+    <script src="./lib/jquery/jquery.min.js"></script>
+    <script src="./lib/bootstrap/js/bootstrap.min.js"></script>
+    <script src="./lib/Template/template-web.js"></script>
+    <script src="./js/gsproduct.js"></script>
+</body>
+
+</html>

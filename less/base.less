@@ -1,0 +1,50 @@
+@charset "UTF-8";
+*,
+::before,
+::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-size: 14px;
+    font-family: 'Microsoft YaHei', sans-serif;
+    background-color: #f5f5f5;
+    
+}
+a {
+    color: #333;
+    text-decoration: none;
+  }
+  ul,
+  ol {
+    list-style: none;
+  }
+  input[type="text"],
+  input[type="search"],
+  textarea {
+    border: none;
+    outline: none;
+    resize: none;
+  //改变按钮和其他控件的外观，使其类似于原生控件。,主流浏览器并不支持;
+    -webkit-appearance: none;
+  }
+  .fl {
+    float: left;
+  }
+  .fr {
+    float: right;
+  }
+  .clearfix::after {
+    content: "";
+    display: block;
+    visibility: hidden;
+    height: 0;
+    line-height: 0;
+    clear: both;
+  }
+  
+  img {
+    display: block;
+    width: 100%;
+  }

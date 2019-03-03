@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="./lib/flexible/flexible.js"></script>
+    <link rel="stylesheet" href="./lib/bootstrap/css/bootstrap.css">
+    <link rel="stylesheet" href="./css/baicaijia.css">
+    <title>白菜价</title>
+</head>
+
+<body>
+    <div class="container">
+        <!-- 头部 -->
+        <div class="header">
+            白菜价-淘宝内部卷
+            <img class="r_img" src="./images/header_app.png" alt="">
+
+        </div>
+
+        <!-- 1. data-toggle="tab"  标记当前按钮, 用于切换tab栏
+        2. href="#home"  通过 id 与需要切换的面板关联
+      --> 
+      <div>
+      
+              <!-- 上面用于切换的导航 -->
+              <ul class="nav nav-tabs">
+                <!-- <li class="active"><a href="#product01"  data-toggle="tab">特别推荐</a></li>
+                <li ><a href="#product02"  data-toggle="tab">热销</a></li>
+                <li ><a href="#product03"  data-toggle="tab">9.9</a></li>
+                <li ><a href="#product04"  data-toggle="tab">19.9</a></li>
+                <li ><a href="#product05"  data-toggle="tab">数码家电</a></li>
+                <li ><a href="#product06"  data-toggle="tab">家具</a></li>
+                <li ><a href="#product07"  data-toggle="tab">家居</a></li> -->
+              </ul>
+            
+              <!-- 切换显示的面板 -->
+              <div class="tab-content">
+                <!-- <div class="tab-pane active" id="product01">
+                  <div class="left col-xs-5">
+                      <img src="./" alt="">
+                  </div>
+                  <div class="right col-xs-7">
+                      <p class="p1">设计品牌羊毛衫猪啊实打实的搜索框</p>
+                      <p class="p2">卷后&yen;12312　<span>12312</span></p>
+                     <!-- 进度条 -->
+                      <!-- <div class="process">
+
+                      </div> -->
+                      <!-- 领劵 -->
+                      <!-- <a href="#">
+                          点此领十元优惠券
+                      </a>
+                      <a class="link" href="#">下单连接</a>
+                  </div> -->
+                <!-- </div> 
+                <div class="tab-pane" id="product02">222</div>
+                <div class="tab-pane" id="product03">333</div>
+                <div class="tab-pane" id="product04">444</div>
+                <div class="tab-pane" id="product05">555</div>
+                <div class="tab-pane" id="product06">666</div>
+                <div class="tab-pane" id="product07">777</div> -->
+            </div>
+            
+       </div>
+      
+
+        <!-- 底部 -->
+        <div class="mmm_footer">
+            <a href="#" class="more">更多优惠信息>></a>
+            <div class="info">
+                <p>品牌排行</p>
+                <a href="#">
+                    <img src="./images/more.png" alt="">
+                </a>
+            </div>
+            <ul class="clearfix">
+                <li>登陆</li>
+                <li>注册</li>
+                <li>
+                    <img src="./images/top.jpg" alt="">
+                    <p>返回顶部</p>
+                </li>
+            </ul>
+            <div class="word">
+                <span class="sp1">手机APP下载</span>
+                <span>慢慢买手机版</span>
+                <span class="sp2">掌上比价平台</span>
+                <p>m.manmanbuy.com</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- 标题 -->
+  <script type="text/html" id="baiTpl">
+     {{ each result v i}}
+    <li data-id='{{ v.titleId}}' class="{{ i===0 ? 'active': ''}}"><a href="#b{{ i }}"  data-toggle="tab">{{ v.title }}</a></li>  
+    {{ /each }}
+  </script>
+  <!-- 内容 -->
+  <script type="text/html" id="contentTpl">
+    {{ each result v i }}
+  
+    <div class="tab-pane active" id="b{{ i }}">
+        <div class="left col-xs-5">
+           {{@v.productImg}}
+        </div>
+        <div class="right col-xs-7">
+            {{@v.productName}}
+            {{@v.productPrice}}
+           <!-- 进度条 -->
+          <span class='process'>{{@v.productCouponRemain }}</span> 
+            
+            <!-- 领劵 -->
+            {{@v.productCoupon}}
+           {{@v.productHref}}
+           
+        </div>
+      </div>
+    {{ /each }}
+</script>
+
+
+    <script src="./lib/jquery/jquery.min.js"></script>
+    <!-- <script src="./lib/zepto/zepto.min.js"></script> -->
+    <script src="./lib/bootstrap/js/bootstrap.min.js"></script>
+    <script src="./lib/Template/template-web.js"></script>
+    <script src="./js/baicaijia.js"></script>
+</body>
+
+</html>

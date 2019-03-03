@@ -1,0 +1,62 @@
+@import './base.less';
+@import './normalize.less';
+@import './commen.less';
+.m_line{
+    height: 50/@base;
+    width: 100%;
+    background-color: #ccc;
+    ul{
+        position: relative;
+        li{
+            float: left;
+            height: 50/@base;
+            // width: 100%;
+           line-height: 50/@base;
+        　　
+           button{
+               position: absolute;
+               right: 0;
+               height: 45/@base;
+               line-height: 45/@base;
+               width: 100/@base;
+               border-radius: 10/@base;
+           }
+        }
+    }
+   
+
+}
+
+
+// 产品
+.product{
+    li{
+        height: 236/@base;
+        width: 100%;
+        .left{
+            float: left;
+            width: 40%;
+            img{
+                display: block;
+                height: 50%;
+                width: 50%;
+                margin-left: 20/@base;
+            }
+        }
+        .right{
+            float: right;
+            width: 60%;
+            p{
+                font-size: 18/@base;
+                margin-top:20/@base;
+            }
+            .p1{
+                color: #ccc;
+            }
+            span{
+                color: red;
+                font-size: 24/@base;
+            }
+        }
+    }
+}

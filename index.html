@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="./lib/flexible/flexible.js"></script>
+    <link rel="stylesheet" href="./lib/mui/css/mui.css">
+    <link rel="stylesheet" href="./css/index.css">
+    <title>首页</title>
+</head>
+
+<body>
+    <div class="container">
+        <!-- 头部 -->
+        <div class="header">
+            <img class="h_img" src="./images/header_logo.png" alt="">
+            <img class="r_img" src="./images/header_app.png" alt="">
+
+        </div>
+        <!-- 搜索 -->
+        <div class="search">
+            <input type="text" placeholder="请输入想要比价的商品"><button>搜索</button>
+        </div>
+
+        <!-- 线 -->
+        <div class="m_line"></div>
+
+        <!-- 菜单 -->
+        <div class="m_menu">
+            <ul class="clearfix">
+                <!-- <li>
+                    <a href="#">
+                        <img src="./images/ic_search.png" alt="">
+                        <p>比价搜索</p>
+
+                        一个坑
+                    </a> -->
+
+            </ul>
+        </div>
+
+
+        <div class="m_nav">超值折扣推荐</div>
+
+        <div class="mmm_footer">
+                <a href="#" class="more">更多优惠信息>></a>
+                <div class="info">
+                    <p>品牌排行</p>
+                    <a href="#">
+                        <img src="./images/more.png" alt="">
+                    </a>
+                </div>
+                <ul class="clearfix">
+                            <li>登陆</li>
+                            <li>注册</li>
+                            <li>
+                                <img src="./images/top.jpg" alt="">
+                                <p>返回顶部</p>
+                            </li>
+                </ul>
+                <div class="word">
+                    <span class="sp1">手机APP下载</span>
+                    <span>慢慢买手机版</span>
+                    <span class="sp2">掌上比价平台</span>
+                    <p>m.manmanbuy.com</p>
+                </div>
+            </div>
+    
+    </div>
+    <!-- 菜单栏 -->
+    <script type='text/html' id="templateMenu">
+       {{ each result v i}}
+       {{ if i < 8}}
+       <li>
+        <a href="{{ v.titlehref }}">
+            {{@v.img}} 
+            <p>{{ v.name }}</p>
+        </a>
+      </li>
+        {{ else }}
+        <li class="current" data-id = "{{ i }}">
+                <a href="{{ v.titlehref }}">
+                    {{@v.img}} 
+                    <p>{{ v.name }}</p>
+                </a>
+              </li>
+        {{ /if }}
+       {{ /each }}
+       
+
+      
+    </script>
+
+     <!-- 产品 -->
+     <script type="text/html" id="productTpl">
+        <script type='text/html' id='productTpl'>
+          {{ each result v i}}
+         
+          <div class="p_left">
+              {{@v.productImg2}}
+              </div>
+              <div class="p_right">
+                  <p class="p1"><h3></h3></p>
+                  <p class="p2">jiag</p>
+                  <p class="p3">日期</p>
+              </div>
+
+              {{ /each }}
+          </script>
+     </script>
+
+    <script src="./lib/zepto/zepto.min.js"></script>
+    <script src="./lib/mui/js/mui.js"></script>
+    <script src="./lib/Template/template-web.js"></script>
+    <script src="./js/index.js"></script>
+</body>
+
+</html>
