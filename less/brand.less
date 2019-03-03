@@ -1,0 +1,72 @@
+@import './base.less';
+@import './normalize.less';
+@import './commen.less';
+
+
+
+// 分界线
+.m_line{
+    height: 35/@base;
+    width: 100%;
+    background-color: rgb(247, 224, 224);
+    margin-bottom: 10/@base;
+    padding-left: 20/@base;
+    border-top: 2/@base solid #ccc;
+    border-bottom: 2/@base solid #ccc;
+}
+.m_li{
+    height: 50/@base;
+    line-height: 40/@base;
+    width: 100%;
+    padding-left: 20/@base;
+    background-color: rgb(247, 224, 224);
+    border-top: 2/@base solid #ccc;
+    border-bottom: 2/@base solid #ccc;
+}
+
+.lei  li{
+    border-bottom: 2/@base solid #ccc;
+    background-color: white;
+    height: 50/@base;
+}
+
+.product{
+    .tip{
+        margin-top: 20/@base;
+        height: 20/@base;
+        width: 100%;
+        // color: #ccc;
+        text-align: center;
+        line-height: 20/@base;
+    }
+    li{
+        height: 236/@base;
+        width: 100%;
+        .left{
+            float: left;
+            width: 40%;
+            img{
+                display: block;
+                height: 50%;
+                width: 50%;
+                margin-left: 20/@base;
+            }
+        }
+        .right{
+            float: right;
+            width: 60%;
+            p{
+                font-size: 18/@base;
+                margin-top:20/@base;
+            }
+            .p1{
+                color: #ccc;
+            }
+            span{
+                color: red;
+                font-size: 24/@base;
+            }
+        }
+    }
+}
+

@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="./lib/flexible/flexible.js"></script>
+    <link rel="stylesheet" href="./lib/mui/css/mui.css">
+    <link rel="stylesheet" href="./css/commen.css">
+    <link rel="stylesheet" href="./css/brand.css">
+
+    <title>品牌详情</title>
+</head>
+
+<body>
+    <div class="container">
+        <!-- 头部 -->
+        <div class="header">
+            <img class="h_img" src="./images/header_logo.png" alt="">
+            <img class="r_img" src="./images/header_app.png" alt="">
+
+        </div>
+        <!-- 搜索 -->
+        <div class="search">
+            <input type="text" placeholder="请输入想要比价的商品"><button>搜索</button>
+        </div>
+
+        <!-- 线 -->
+        <div class="m_line">
+            <a href="index.html">首页＞</a><a href="#">全部分类</a>
+
+        </div>
+        <div class="m_li">
+            电视品牌详情
+        </div>
+        <div class="lei">
+            <ul id="ul">
+
+
+            </ul>
+        </div>
+        <!-- 具体情况 产品 -->
+        <div class="product">
+                <p class="tip">平板电脑销量排行</p>
+                    <ul>
+                        <!-- <li>
+                            <div class="left">
+                                <img src="./images/product.jpg" alt="">
+                            </div>
+                            <div class="right">
+                                <p>乐视全高清撒打电话即可</p>
+                                <p>液晶电视</p>
+                                <span>&yen;23432</span>
+                                <p class="p1">报价　评论</p>
+                            </div>
+                        </li> -->
+                      
+                    </ul>
+        
+                </div>
+
+
+
+
+
+        <div class="mmm_footer">
+
+            <ul class="clearfix">
+                <li>登陆</li>
+                <li>注册</li>
+                <li>
+                    <img src="./images/top.jpg" alt="">
+                    <p>返回顶部</p>
+                </li>
+            </ul>
+            <div class="word">
+                <span class="sp1">手机APP下载</span>
+                <span>慢慢买手机版</span>
+                <span class="sp2">掌上比价平台</span>
+                <p>m.manmanbuy.com</p>
+            </div>
+        </div>
+    </div>
+
+    <script type="text/html" id="brandxTpl">
+
+
+        {{ each result v i}}
+        <li id="brand">
+
+              <span>{{i+1}}</span>   <a class="mui-navigate-right" href="#">{{ v.brandName }}</a>     
+               <p>{{ v.brandInfo}}</p>
+            </li>   
+         
+            
+        {{ /each }}
+
+    </script>
+
+    <script type="text/html" id="product">
+        {{ each result v i}}
+        <li>
+                <div class="left">
+                    <!-- <img src="./images/product.jpg" alt=""> -->
+               {{@v.productImg}}
+                </div>
+                <div class="right">
+                    <p>{{ v.productName}}</p>
+                    <span>{{ v.productPrice}}</span>
+                    <p class="p1">{{v.productQuote}}  {{ v.productCom}}</p>
+                </div>
+            </li>
+        {{ /each}}
+    </script>
+
+
+    <script src="./lib/jquery/jquery.min.js"></script>
+    <script src="./lib/mui/js/mui.js"></script>
+    <script src="./lib/Template/template-web.js"></script>
+    <script src="./js/brand.js"></script>
+</body>
+
+</html>

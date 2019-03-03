@@ -1,0 +1,52 @@
+@import './base.less';
+@import './normalize.less';
+@import './commen.less';
+
+// 头部重置
+.header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 98/@base;
+    line-height: 40/@base;
+    text-align: center;
+    font-size: 50/@base;
+    width: 100%;
+    color: white;
+    background-color: orange;
+    padding-left: 32/@base;
+  
+    padding-top: 24/@base;
+    z-index: 999;
+    
+   img{
+       display: block;
+      
+   }
+//    .h_img{
+//     width: 378/@base;
+//     height: 52/@base;
+//    }
+   .r_img{
+       position: absolute;
+       right:32/@base;
+       top: 24/@base;
+       width: 62/@base;
+       height: 52/@base;
+   }
+}
+.product{
+    padding: 100/@base;
+    margin: 0 auto;
+    .pc{
+        height:86/@base;
+        width: 240/@base;
+        border:2/@base solid #ccc;
+      img{
+          height: 28/@base;
+          width: 36/@base;
+          margin-top: 20/@base;
+      }
+    }
+}
+
