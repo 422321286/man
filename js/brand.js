@@ -14,7 +14,7 @@ $(function(){
    var id = getSearch();
 
    console.log(id);
-
+//第一
    $.ajax({
        type:'get',
        url:'http://127.0.0.1:9090/api/getbrand',
@@ -29,7 +29,7 @@ $(function(){
 
        }
    })
-
+//第二个
    $.ajax({
     type:'get',
     url:'http://127.0.0.1:9090/api/getbrandproductlist',
@@ -46,5 +46,23 @@ $(function(){
     }
 })
 
-   
+//评论渲染
+   $('.product').on('click','li',function(){
+      var id = $(this).data('id');
+      console.log(id);
+      $.ajax({
+          type:'get',
+          url:'http://127.0.0.1:9090/api/getproductcom',
+          data:{
+            productid: id
+          },
+          dataType:'json',
+          success:function(info){
+            console.log( info);
+            var htmlstr = template('pintTpl',info);
+            $('.pinlun').html(htmlstr);
+          }
+      })
+      
+   })
 })

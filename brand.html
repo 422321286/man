@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <script src="./lib/flexible/flexible.js"></script>
-    <link rel="stylesheet" href="./lib/mui/css/mui.css">
+    <link rel="stylesheet" href="./lib/bootstrap/css/bootstrap.css">
     <link rel="stylesheet" href="./css/commen.css">
     <link rel="stylesheet" href="./css/brand.css">
 
@@ -36,7 +36,7 @@
         </div>
         <div class="lei">
             <ul id="ul">
-
+           <!-- keng -->
 
             </ul>
         </div>
@@ -60,10 +60,17 @@
         
                 </div>
 
-
-
-
-
+        <!-- 评论 -->
+        <div class="pinlun">
+                <!-- <div class="wang">
+                    <p>s******r <i class="pull-right">2012/12/2</i></p>
+                    
+                    <p>圣诞节卡速度快建安大接口说道阿萨德 大数据库大手大脚卡的加速度计熬枯受淡
+                        爱上大数据库大师的卡萨丁撒旦教奥术大师多奥斯卡的骄傲山东矿机阿萨德哈吉斯看得见阿打算打算打开撒
+                        爱神的箭阿萨杀菌的教案上大巴上看到卡实打实
+                    </p>
+                </div> -->
+        </div>
         <div class="mmm_footer">
 
             <ul class="clearfix">
@@ -87,7 +94,7 @@
 
 
         {{ each result v i}}
-        <li id="brand">
+        <li data-id='{{ v.productId}}' id="brand">
 
               <span>{{i+1}}</span>   <a class="mui-navigate-right" href="#">{{ v.brandName }}</a>     
                <p>{{ v.brandInfo}}</p>
@@ -100,7 +107,7 @@
 
     <script type="text/html" id="product">
         {{ each result v i}}
-        <li>
+        <li data-id='{{ v.productId }}'>
                 <div class="left">
                     <!-- <img src="./images/product.jpg" alt=""> -->
                {{@v.productImg}}
@@ -114,9 +121,20 @@
         {{ /each}}
     </script>
 
+    <!-- 评论 -->
+    <script type='text/html' id="pintTpl">
+        {{ each result v i }}
+        <div class="wang">
+                <p>{{v.comName}} <i class="pull-right">{{ v.comTime}}</i></p>
+                
+                <p>{{v.comContent}} {{v.comFrom}}
+                </p>
+            </div>
+            {{ /each }}
+    </script>
 
     <script src="./lib/jquery/jquery.min.js"></script>
-    <script src="./lib/mui/js/mui.js"></script>
+    <script src="./lib/bootstrap/js/bootstrap.min.js"></script>
     <script src="./lib/Template/template-web.js"></script>
     <script src="./js/brand.js"></script>
 </body>

@@ -365,10 +365,16 @@ th {
   border-top: 0.02666667rem solid #cccccc;
   border-bottom: 0.02666667rem solid #cccccc;
 }
-.lei li {
+.lei ul {
+  width: 100%;
+}
+.lei ul li {
   border-bottom: 0.02666667rem solid #cccccc;
   background-color: white;
-  height: 0.66666667rem;
+  height: 1.06666667rem;
+}
+.lei ul li p {
+  font-size: 0.24rem;
 }
 .product .tip {
   margin-top: 0.26666667rem;
@@ -405,4 +411,20 @@ th {
 .product li .right span {
   color: red;
   font-size: 0.32rem;
+}
+.pinlun {
+  width: 100%;
+}
+.pinlun .wang {
+  width: 100%;
+  padding: 0.26666667rem 0.26666667rem;
+  border: 0.02666667rem solid #cccccc;
+}
+.pinlun .wang p {
+  line-height: 16px;
+  font-size: 0.18666667rem;
+  border: none;
+}
+.pinlun .wang .adress {
+  text-align: right;
 }
