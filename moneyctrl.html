@@ -7,6 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <script src="./lib/flexible/flexible.js"></script>
     <link rel="stylesheet" href="./lib/bootstrap/css/bootstrap.css">
+    <link rel="stylesheet" href="./lib/pagination/pagination.css">
     <link rel="stylesheet" href="./css/moneyctrl.css">
     <title>省钱</title>
 </head>
@@ -26,9 +27,7 @@
         <div class="product">
 
             <ul>
-
-
-                <li>
+                <!-- <li>
                     <div class="left">
                         <img src="./images/product.jpg" alt="">
                     </div>
@@ -38,45 +37,21 @@
                         <span>&yen;23432</span>
                         <p class="p1">报价　评论</p>
                     </div>
-                </li>
-                <li>
-                        <div class="left">
-                            <img src="./images/product.jpg" alt="">
-                        </div>
-                        <div class="right">
-                            <p>乐视全高清撒打电话即可</p>
-                            <p>液晶电视</p>
-                            <span>&yen;23432</span>
-                            <p class="p1">报价　评论</p>
-                        </div>
-                    </li>
-                    <li>
-                            <div class="left">
-                                <img src="./images/product.jpg" alt="">
-                            </div>
-                            <div class="right">
-                                <p>乐视全高清撒打电话即可</p>
-                                <p>液晶电视</p>
-                                <span>&yen;23432</span>
-                                <p class="p1">报价　评论</p>
-                            </div>
-                        </li>  
+                </li> -->
+              
             </ul>
 
             <!-- 分页功能  -->
+            <div class="pagi">
+                    <div id="pagination" class="pull-right"></div>
+            </div>
         </div>
 
 
 
         <!-- 底部 -->
-        <div class="mmm_footer">
-            <a href="#" class="more">更多优惠信息>></a>
-            <div class="info">
-                <p>品牌排行</p>
-                <a href="#">
-                    <img src="./images/more.png" alt="">
-                </a>
-            </div>
+        <!-- <div class="mmm_footer">
+           
             <ul class="clearfix">
                 <li>登陆</li>
                 <li>注册</li>
@@ -91,14 +66,32 @@
                 <span class="sp2">掌上比价平台</span>
                 <p>m.manmanbuy.com</p>
             </div>
-        </div>
+        </div> -->
     </div>
 
+    <script type="text/html" id="proTpl">
+        {{ each result v i}}
+        <li>
+                <div class="left">
+                  <a href="moneyproduct.html?key={{v.productId}}">{{@v.productImgSm }}</a> 
+                </div>
+                <div class="right">
+                    <p>{{ v.productName}}</p>
+                   
+                    <span>{{v.productPinkage}}</span>
+                    <p class="p1">{{v.productFrom}} | {{v.productTime}}</p>
+                </div>
+            </li>
+        {{ /each }}
+    
+    </script>
 
 
     <script src="./lib/jquery/jquery.min.js"></script>
     <script src="./lib/bootstrap/js/bootstrap.min.js"></script>
+    <script src="./lib/pagination/jquery.pagination.js"></script>
     <script src="./lib/Template/template-web.js"></script>
+    <script src="./js/moneyctrl.js"></script>
 </body>
 
 </html>

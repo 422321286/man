@@ -29,7 +29,7 @@
             <ul class="clearfix">
                 <li><a href="index.html">　首页＞</a></li>
                 <li><a href="category.html">电视＞</a></li>
-                <li>乐视电视阿＞</li>
+                <li>乐视电视＞</li>
                 <li><button>筛选</button></li>
             </ul>
 
@@ -37,65 +37,48 @@
 
         <!-- 具体情况 产品 -->
         <div class="product">
-
             <ul>
-                <li>
-                       
-                                <p>乐视全高清撒打电话即可</p>
-                                <p>液晶电视</p>
-                      
-                        <img src="./images/ic_kb.png" alt="">
-                        <div class="yuan">
-                             收藏
-                        </div>
-                   
-                </li>
+                <!-- <li>
+                    <p>乐视全高清撒打电话即可</p>
+                    <p>液晶电视</p>
+
+                    <img src="./images/ic_kb.png" alt="">
+                    <div class="yuan">
+                        收藏
+                    </div>
+                </li> -->
             </ul>
         </div>
 
-       <div class="bj">
-           <a href="#">比价购买</a>
-           <a href="#">产品参数</a>
-           <a href="#">评价(23322)</a>
+        <!-- <div class="bj">
+            <a href="#">比价购买</a>
+            <a href="#">产品参数</a>
+            <a href="#">评价(23322)</a>
+
+
+        </div> -->
+
+
+        <!-- 评论 -->
+        <p class="jia">网友评价</p>
+        <div class="pinlun">
+            <!-- <p><img src="./images/slogo.png" alt=""> 京东商城 <button>去购买</button><span>&yen;1980 </span></p>
+            <p class="p2">*实际价格以网站实时售出是为准,我们可能有数小时的延时</p> -->
           
-          
-       </div>
-      
-
-       <!-- 评论 -->
-       <div class="pinlun">
-           <p><img src="./images/slogo.png" alt=""> 京东商城 <button>去购买</button><span>&yen;1980 </span></p>
-           <p class="p2">*实际价格以网站实时售出是为准,我们可能有数小时的延时</p>
-           <p class="jia">网友评价</p>
-
-
-           <div class="wang">
-               <p>s******r <i class="pull-right">2012/12/2</i></p>
-               <p class="adress"> 购买自:京东商城</p>
-               <p>圣诞节卡速度快建安大接口说道阿萨德 大数据库大手大脚卡的加速度计熬枯受淡
-                   爱上大数据库大师的卡萨丁撒旦教奥术大师多奥斯卡的骄傲山东矿机阿萨德哈吉斯看得见阿打算打算打开撒
-                   爱神的箭阿萨杀菌的教案上大巴上看到卡实打实
-               </p>
-           </div>
-
-           <div class="wang">
-                <p>s******r <i class="pull-right">2012/12/2</i></p>
+            <div class="wang">
+                <ul>
+               <!-- <p>s******r <i class="pull-right">2012/12/2</i></p>
                 <p class="adress"> 购买自:京东商城</p>
                 <p>圣诞节卡速度快建安大接口说道阿萨德 大数据库大手大脚卡的加速度计熬枯受淡
                     爱上大数据库大师的卡萨丁撒旦教奥术大师多奥斯卡的骄傲山东矿机阿萨德哈吉斯看得见阿打算打算打开撒
                     爱神的箭阿萨杀菌的教案上大巴上看到卡实打实
-                </p>
+                </p> -->
+                </ul>
+                
             </div>
 
-            <div class="wang">
-                    <p>s******r <i class="pull-right">2012/12/2</i></p>
-                    <p class="adress"> 购买自:京东商城</p>
-                    <p>圣诞节卡速度快建安大接口说道阿萨德 大数据库大手大脚卡的加速度计熬枯受淡
-                        爱上大数据库大师的卡萨丁撒旦教奥术大师多奥斯卡的骄傲山东矿机阿萨德哈吉斯看得见阿打算打算打开撒
-                        爱神的箭阿萨杀菌的教案上大巴上看到卡实打实
-                    </p>
-                </div>
-       </div>
+          
+        </div>
         <!-- 底部 -->
         <div class="mmm_footer">
             <a href="#" class="more">更多优惠信息>></a>
@@ -122,11 +105,42 @@
         </div>
     </div>
 
+    <script type="text/html" id="bijiaTpl">
+        {{ each result v i}}
+        <li data-id='{{v.productId}}'>
+                <p>{{v.productName}}</p>
+
+                {{@v.productImg}}
+                <div  class="yuan">
+                        收藏
+                    </div>
+            </li>
+            <div class="bj">
+                    {{@v.bjShop}}
+        
+        
+                </div>
+        {{ /each}}
+    </script>
+
+    <!-- 评论 -->
+    <script type="text/html" id="pinTpl">
+
+       {{ each result v i }}
+       <li>
+       <p>{{ v.comName}} <i class="pull-right">{{ v.comTime}}</i></p>
+       <p class="adress"> {{ v.comFrom}}</p>
+       <p>{{ v.comContent}}</p>
+    </li>
+       {{ /each}}
+
+    </script>
 
 
     <script src="./lib/jquery/jquery.min.js"></script>
     <script src="./lib/bootstrap/js/bootstrap.min.js"></script>
     <script src="./lib/Template/template-web.js"></script>
+    <script src="./js/bijia.js"></script>
 </body>
 
 </html>

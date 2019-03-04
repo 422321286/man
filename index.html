@@ -43,9 +43,29 @@
 
 
         <div class="m_nav">超值折扣推荐</div>
+         <!-- 具体情况 产品 -->
+         <div class="product">
+
+            <ul>
+                <!-- <li>
+                    <div class="left">
+                        <img src="./images/product.jpg" alt="">
+                    </div>
+                    <div class="right">
+                        <p>乐视全高清撒打电话即可</p>
+                        <p>液晶电视</p>
+                        <span>&yen;23432</span>
+                        <p class="p1">报价　评论</p>
+                    </div>
+                </li>  -->
+            </ul>
+
+            <!-- 分页功能  -->
+        </div>
+
 
         <div class="mmm_footer">
-                <a href="#" class="more">更多优惠信息>></a>
+                <a href="moneyctrl.html" class="more">更多优惠信息>></a>
                 <div class="info">
                     <p>品牌排行</p>
                     <a href="#">
@@ -94,22 +114,24 @@
     </script>
 
      <!-- 产品 -->
-     <script type="text/html" id="productTpl">
+
         <script type='text/html' id='productTpl'>
           {{ each result v i}}
          
-          <div class="p_left">
-              {{@v.productImg2}}
-              </div>
-              <div class="p_right">
-                  <p class="p1"><h3></h3></p>
-                  <p class="p2">jiag</p>
-                  <p class="p3">日期</p>
-              </div>
+          <li>
+            <div class="left">
+              <a href="moneyproduct.html?key={{v.productId}}">{{@v.productImgSm}}</a>  
+            </div>
+            <div class="right">
+                <p>{{ v.productName}}</p>
+                <span>{{ v.productPinkage}}</span>
+                <p class="p1">{{v.productFrom}} ｜　{{ v.productTime}}</p>
+            </div>
+        </li>
 
               {{ /each }}
           </script>
-     </script>
+ 
 
     <script src="./lib/zepto/zepto.min.js"></script>
     <script src="./lib/mui/js/mui.js"></script>

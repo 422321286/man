@@ -7,6 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <script src="./lib/flexible/flexible.js"></script>
     <link rel="stylesheet" href="./lib/bootstrap/css/">
+    <link rel="stylesheet" href="./lib/pagination/pagination.css">
     <link rel="stylesheet" href="./css/productList.css">
     <title>商品</title>
 </head>
@@ -37,11 +38,8 @@
 
         <!-- 具体情况 产品 -->
         <div class="product">
-
             <ul>
-
-
-                <li>
+                <!-- <li> 
                     <div class="left">
                         <img src="./images/product.jpg" alt="">
                     </div>
@@ -51,43 +49,21 @@
                         <span>&yen;23432</span>
                         <p class="p1">报价　评论</p>
                     </div>
-                </li>
-                <li>
-                        <div class="left">
-                            <img src="./images/product.jpg" alt="">
-                        </div>
-                        <div class="right">
-                            <p>乐视全高清撒打电话即可</p>
-                            <p>液晶电视</p>
-                            <span>&yen;23432</span>
-                            <p class="p1">报价　评论</p>
-                        </div>
-                    </li>
-                    <li>
-                            <div class="left">
-                                <img src="./images/product.jpg" alt="">
-                            </div>
-                            <div class="right">
-                                <p>乐视全高清撒打电话即可</p>
-                                <p>液晶电视</p>
-                                <span>&yen;23432</span>
-                                <p class="p1">报价　评论</p>
-                            </div>
-                        </li>  
+                </li> -->
+ 
             </ul>
+            
+          
         </div>
-
-
+    
+<!-- 分页 -->
+<div class="pagi">
+        <div id="pagination" class="pull-right"></div>
+</div>
 
         <!-- 底部 -->
         <div class="mmm_footer">
-            <a href="#" class="more">更多优惠信息>></a>
-            <div class="info">
-                <p>品牌排行</p>
-                <a href="#">
-                    <img src="./images/more.png" alt="">
-                </a>
-            </div>
+           
             <ul class="clearfix">
                 <li>登陆</li>
                 <li>注册</li>
@@ -104,12 +80,28 @@
             </div>
         </div>
     </div>
-
+    <!-- 产品列表 -->
+    <script type="text/html" id="listTpl">
+        {{ each result v i}}   
+        <li>
+                <div class="left">
+                  <a href="bijia.html?{{v.productId}}={{v.brandName}}"> {{@v.productImg}}</a>
+                </div>
+                <div class="right">
+                    <p>{{ v.productName}}</p>
+                    <span>{{ v.productPrice}}</span>
+                    <p class="p1">{{ v.productQuote}}　{{ v.productCom}}</p>
+                </div>
+            </li>
+        {{ /each }}
+    </script>
 
 
     <script src="./lib/jquery/jquery.min.js"></script>
     <script src="./lib/bootstrap/js/bootstrap.min.js"></script>
+    <script src="./lib/pagination/jquery.pagination.js"></script>
     <script src="./lib/Template/template-web.js"></script>
+    <script src="./js/productList.js"></script>
 </body>
 
 </html>

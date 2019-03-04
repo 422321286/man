@@ -116,38 +116,37 @@
    font-size: 30/@base;
    padding-left:20/@base;
 }
-.m_product{
-
-    
-        .p_left{
-          width: 230/@base;
-          height: 260/@base;
-        //  margin: 0 auto;
-        vertical-align: middle;
-        text-align: center;
-         float: left;
-         position: relative;
-        //  padding:20/@base;
-          img{
-            width: 100/@base;
-            height: 100/@base;
-           position: absolute;
-           top:21%;
-           left: 21%;
-            
-          }
+// 产品
+.product{
+    li{
+        height: 236/@base;
+        width: 100%;
+        .left{
+            float: left;
+            width: 40%;
+            img{
+                display: block;
+                height: 50%;
+                width: 50%;
+                margin-left: 20/@base;
+            }
         }
-       .p_right{
-           overflow: hidden;
-           .p1{
-               color: black;
-               
-           }
-           .p2{
-               color: red;
-           }
-       }
-     
+        .right{
+            float: right;
+            width: 60%;
+            p{
+                font-size: 18/@base;
+                margin-top:20/@base;
+            }
+            .p1{
+                color: #ccc;
+            }
+            span{
+                color: red;
+                font-size: 24/@base;
+            }
+        }
+    }
 }
 
 // 底部;

@@ -19,49 +19,31 @@
             <img class="r_img" src="./images/header_app.png" alt="">
 
         </div>
-       
-      
-        <!-- 具体情况 产品 -->
-        <div class="product">
-            
-          <h3>移动端凑单品:海天 鲜味 生抽 128L</h3 >
-          <p class="p2">京东商场　<span class="time">10-25 14:10</span>　小编烟火/慢慢买</p>
-          <p class="coment">是的撒肯定撒开大声点卡仕达回话时间可达斯柯达就开始对哈萨克的骄傲是基督教卡萨
-              <img  class="small" src="./images/ic_bcj.png" alt="">
-              第三款的拉丁即可拉伸就打开了大道理奥斯卡了贷款卡死了肯定撒开了的卢卡申科达拉斯肯德基奥斯卡了大胜靠德
-              爱神的箭卡数据库大数据库很大数据库的哈萨克接电话撒即可道具卡是的撒
-              <img src="./images/product.jpg" alt="">
-          </p>
-           
-          <div class="pri">
-                <ul class="list-group">
-                       
-                        <li>山西　　　有货</li>
-                        <li>山西　　　有货</li>
-                        <li>山西　　　有货</li>
-                        <li>山西　　　有货</li>
-                        <li>山西　　　有货</li>
-                        <li>山西　　　有货</li>
-                        <li>山西　　　有货</li>
-                        <li>山西　　　有货</li>
-                        <li>山西　　　有货</li>
-                      </ul>
-          </div>
-
-
+   
         
-        </div>
-        <!-- 去购买 -->
-        <p class="go">前往购买</p>
-           
-      <!-- 二维码 -->
-      <div class="er">
-         <img src="./images/mmbweixin2.png" alt="">
-      </div>
-      <!-- 发表评论 直接请求数据,返回标签 -->
-    <div class="comm">
-            发表评论 直接请求数据,返回标签
+    <!-- 具体情况 产品 -->
+    <div class="product">
+        
+   
+
+
+    
     </div>
+    <!-- 去购买 -->
+    <p class="go">前往购买</p>
+       
+  <!-- 二维码 -->
+  <div class="er">
+     <img src="./images/mmbweixin2.png" alt="">
+  </div>
+  <!-- 发表评论 直接请求数据,返回标签 -->
+<div class="comm">
+       
+</div>
+       
+   
+
+     
         <!-- 底部 -->
         <div class="mmm_footer">
             <a href="#" class="more">更多优惠信息>></a>
@@ -88,11 +70,33 @@
         </div>
     </div>
 
+    <script type="text/html" id="proTpl">
+      {{ each result v i}}
+            <h3>{{ v.productName }}</h3 >
+            <p class="p2">{{ v.productFrom }}<span class="time">{{ v.productTime}}</span>{{v.productTips}}</p>
+            <p class="coment">
+               {{v.productInfo2}}
+               {{@v.productImgSm}}
+            </p>
+            <div class="city">
+                    {{@v.productCity}}
+            </div>
+          
+      {{ /each}}
+    </script>
+
+    <script type="text/html" id="pro2Tpl">
+        {{ each result v i}}
+         {{@v.productComment}}   
+        
+        {{ /each}}
+      </script>
 
 
     <script src="./lib/jquery/jquery.min.js"></script>
     <script src="./lib/bootstrap/js/bootstrap.min.js"></script>
     <script src="./lib/Template/template-web.js"></script>
+    <script src="./js/moneyproduct.js"></script>
 </body>
 
 </html>

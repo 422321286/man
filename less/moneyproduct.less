@@ -2,6 +2,9 @@
 @import './normalize.less';
 @import './commen.less';
 
+.container{
+    padding-bottom: 195/@base;
+}
 // 头部重置
 .header{
     position: fixed;
@@ -15,18 +18,15 @@
     color: white;
     background-color: orange;
     padding-left: 32/@base;
-  
+    
     padding-top: 24/@base;
     z-index: 999;
-    
+
    img{
        display: block;
       
    }
-//    .h_img{
-//     width: 378/@base;
-//     height: 52/@base;
-//    }
+
    .r_img{
        position: absolute;
        right:32/@base;
@@ -82,3 +82,30 @@
     background-color:orange;
     
 }
+
+.city{
+
+    width: 100%;
+    margin-top:30/@base;
+   ul{
+       margin-left:40%;
+       width: 200/@base;
+       border:2/@base solid #ccc;
+       li{
+           border-bottom: 1/@base solid #ccc;
+           strong{
+               float: right;
+            //    margin-left:20/@base;
+           }
+       }
+   }
+}
+
+.list ul li{
+    width: 600/@base;
+    .userimg img{
+        height: 40/@base;
+        width: 40/@base;
+        border-radius: 50%;
+       }
+    }

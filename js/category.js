@@ -36,9 +36,8 @@ $(function(){
            success:function( info ){
              console.log( info );
              var htmlstr = template('tableTpl',info);
-            that[0].innerHTML += htmlstr;
-
-            //  that.html(htmlstr);
+          that.find('.mui-row').html(htmlstr);
+            //  $('li .mui-row').html(htmlstr);
            }
        })
        

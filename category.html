@@ -29,23 +29,19 @@
 
         <div class="m_line">
             <ul id="ul" class="mui-table-view">
-                <!-- <li class="mui-table-view-cell mui-collapse">
-                    <a class="mui-navigate-right" href="#">面板1</a>
-                    <div class="mui-collapse-content">
+                <li class="mui-table-view-cell mui-collapse">
+                    <!-- <a class="mui-navigate-right" href="#">面板1</a> -->
+                    <!-- <div class="mui-collapse-content">
                         <p>
                             <div class="mui-row">
                                 <div class="mui-col-xs-4">
                                     Item 1
                                 </div>
-                                <div class="mui-col-xs-4">
-
-                                    Item 1
-
-                                </div>
+                               
                             </div>
                         </p>
-                    </div>
-                </li> -->
+                    </div> -->
+                </li>
             </ul>
         </div>
 
@@ -62,7 +58,17 @@
             {{ each result v i}}
                 <li data-id="{{v.titleId }}" class="mui-table-view-cell mui-collapse">
                     <a   class="mui-navigate-right" href="#">{{ v.title}}</a>
-                   
+                    <div class="mui-collapse-content">
+                        <p>
+                            <div class="mui-row">
+                                <!-- <div class="mui-col-xs-4">
+
+
+                                </div> -->
+                               
+                            </div>
+                        </p>
+                    </div>
                 </li>
                 {{ /each}}
          
@@ -71,12 +77,10 @@
 
     <!-- 列表 -->
      <script type="text/html" id="tableTpl">
-        <div class="mui-collapse-content">
-                <!-- <p> -->
-                    <div class="mui-row">
+       
                         {{ each result v i }}
                         <div class="ta mui-col-xs-4">  
-                          {{ v.category}}
+                         <a href="productList.html?{{v.category}}={{v.categoryId}}">{{ v.category}}</a> 
                         </div>
                         {{ /each}}
                     </div>

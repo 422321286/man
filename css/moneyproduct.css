@@ -347,6 +347,9 @@ th {
 .mmm_footer .word .sp2 {
   color: #5c6872;
 }
+.container {
+  padding-bottom: 2.6rem;
+}
 .header {
   position: fixed;
   top: 0;
@@ -412,4 +415,27 @@ th {
   text-align: center;
   border-radius: 0.13333333rem;
   background-color: orange;
+}
+.city {
+  width: 100%;
+  margin-top: 0.4rem;
+}
+.city ul {
+  margin-left: 40%;
+  width: 2.66666667rem;
+  border: 0.02666667rem solid #cccccc;
+}
+.city ul li {
+  border-bottom: 0.01333333rem solid #cccccc;
+}
+.city ul li strong {
+  float: right;
+}
+.list ul li {
+  width: 8rem;
+}
+.list ul li .userimg img {
+  height: 0.53333333rem;
+  width: 0.53333333rem;
+  border-radius: 50%;
 }

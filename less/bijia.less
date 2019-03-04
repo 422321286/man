@@ -2,6 +2,9 @@
 @import './normalize.less';
 @import './commen.less';
 
+.search button{
+    width: 99/@base;
+}
 .m_line{
     height: 50/@base;
     width: 100%;
@@ -122,21 +125,25 @@
             background-color:#ccc;
         }
 
-        .wang{
+        .wang {
             // height: 462/@base;
             width: 100%;
             padding: 20/@base 20/@base;
             border-bottom: 2/@base solid #ccc;
-            p{
-                height: 32/@base;
-                line-height: 16px;
-                font-size: 14/@base;
-            border:none;
-             
+            li{
+                border-bottom: 2/@base solid #ccc;
+                p{
+                    // height: 32/@base;
+                    line-height: 16px;
+                    font-size: 14/@base;
+                border:none;
+                 
+                }
+               .adress{
+                   text-align: right;
+               }
             }
-           .adress{
-               text-align: right;
-           }
+            
         }
        
         }

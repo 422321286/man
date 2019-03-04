@@ -38,7 +38,7 @@ $(function(){
            success:function( result ){
               console.log( result );
               var htmlstr = template('productTpl',result);
-              $('.m_product').html(htmlstr);
+              $('.product ul').html(htmlstr);
            }
        })
 })

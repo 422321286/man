@@ -317,29 +317,34 @@ th {
   font-size: 0.4rem;
   padding-left: 0.26666667rem;
 }
-.m_product .p_left {
-  width: 3.06666667rem;
-  height: 3.46666667rem;
-  vertical-align: middle;
-  text-align: center;
+.product li {
+  height: 3.14666667rem;
+  width: 100%;
+}
+.product li .left {
   float: left;
-  position: relative;
+  width: 40%;
 }
-.m_product .p_left img {
-  width: 1.33333333rem;
-  height: 1.33333333rem;
-  position: absolute;
-  top: 21%;
-  left: 21%;
+.product li .left img {
+  display: block;
+  height: 50%;
+  width: 50%;
+  margin-left: 0.26666667rem;
 }
-.m_product .p_right {
-  overflow: hidden;
+.product li .right {
+  float: right;
+  width: 60%;
 }
-.m_product .p_right .p1 {
-  color: black;
+.product li .right p {
+  font-size: 0.24rem;
+  margin-top: 0.26666667rem;
 }
-.m_product .p_right .p2 {
+.product li .right .p1 {
+  color: #ccc;
+}
+.product li .right span {
   color: red;
+  font-size: 0.32rem;
 }
 .mmm_footer {
   width: 100%;
