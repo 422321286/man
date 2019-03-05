@@ -65,14 +65,14 @@ $(function(){
         //点击显示
         $('ul').on('click','.left a',function(){
             var imgid = $(this).data('id')
-
+               nows = imgid;//领点击的图片的下标给数组的小标
             console.log(arr[2]);
            
             $('.btn img').attr('src',arr[imgid]);
            show();
         })
         //点击隐藏
-        $('lbOverlay').on('click',function(){
+        $('.btn span').on('click',function(){
             closeDiv();
         })
     
@@ -86,10 +86,10 @@ function show(){
     $(".lbOverlay").css({"height":window.screen.availHeight});
     $(".lbOverlay").show();
  
-    var st=$(document).scrollTop(); //页面滑动高度
+    // var st=$(document).scrollTop(); //页面滑动高度
     var objH=$(".hidden_pro_au").height();//浮动对象的高度
     var ch=$(window).height();//屏幕的高度  
-    var objT=Number(st)+(Number(ch)-Number(objH))/2;   //思路  浮动高度+（（屏幕高度-对象高度））/2
+    var objT=(Number(ch)-Number(objH))/2;   //思路  浮动高度+（（屏幕高度-对象高度））/2
     $(".hidden_pro_au").css("top",objT);
      
     var sl=$(document).scrollLeft(); //页面滑动左移宽度
@@ -100,6 +100,7 @@ function show(){
     $(".hidden_pro_au").slideDown("20000");//这里显示方式多种效果
 }
 function closeDiv(){
+    $(".lbOverlay").css({"height":0});
     $(".lbOverlay").hide();
     $(".hidden_pro_au").hide();
 }

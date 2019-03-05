@@ -440,3 +440,7 @@ th {
   left: 0;
   z-index: 9999999;
 }
+span {
+  font-size: 0.26666667rem;
+  float: right;
+}
