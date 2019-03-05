@@ -41,8 +41,18 @@
             </ul>
 
         </div>
-
-
+<div class="btn">
+    
+        <!-- <button onclick="show()">点我弹出遮罩层</button> -->
+        <div class="lbOverlay">点击隐藏</div>
+        <div class="hidden_pro_au">
+                <button class="pre">上一页</button>
+                <img src="./images/ic_cu.png" alt="">
+                <button class="next">下一页</button>
+        </div>
+        
+</div>
+    
 
         <!-- 底部 -->
         <div class="mmm_footer">
@@ -50,7 +60,7 @@
             <ul class="clearfix">
                 <li>登陆</li>
                 <li>注册</li>
-                <li>
+                <li id="top">
                     <img src="./images/top.jpg" alt="">
                     <p>返回顶部</p>
                 </li>
@@ -63,12 +73,12 @@
             </div>
         </div>
     </div>
-
+ 
   <script type='text/html' id="yTpl">
       {{ each result v i}}
       <li>
             <div class="left">
-               {{@v.couponProductImg}}
+             <a href="#" data-id='{{ v.couponProductId}}'>{{@v.couponProductImg}}</a> 
             </div>
             <div class="right">
                 <p>{{v.couponProductName}}</p>
@@ -82,6 +92,7 @@
     <script src="./lib/jquery/jquery.min.js"></script>
     <script src="./lib/bootstrap/js/bootstrap.min.js"></script>
     <script src="./lib/Template/template-web.js"></script>
+    <script src="./js/commen.js"></script>
     <script src="./js/couponproduct.js"></script>
 </body>
 
